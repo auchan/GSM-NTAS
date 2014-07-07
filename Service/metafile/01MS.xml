@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<BCPFORMAT
+xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <RECORD>
+    <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," />
+    <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," />
+	<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="10" COLLATION="Chinese_PRC_CI_AS"/>
+	<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="20" COLLATION="Chinese_PRC_CI_AS"/>
+	<FIELD ID="5" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="12"/>
+	<FIELD ID="6" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="41"/>
+	<FIELD ID="7" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="41"/>
+	<FIELD ID="8" xsi:type="CharTerm" TERMINATOR="\n" MAX_LENGTH="3" COLLATION="Chinese_PRC_CI_AS"/>
+  </RECORD>
+  <ROW>
+    <COLUMN SOURCE="1" NAME="IMEI" xsi:type="SQLNUMERIC" PRECISION="15" SCALE="0" />
+    <COLUMN SOURCE="2" NAME="MSISDN" xsi:type="SQLNUMERIC" PRECISION="11" SCALE="0" />
+	<COLUMN SOURCE="3" NAME="UserName" xsi:type="SQLCHAR" LENGTH="10"/>
+	<COLUMN SOURCE="4" NAME="MScompany" xsi:type="SQLCHAR" LENGTH="20"/>
+	<COLUMN SOURCE="5" NAME="gsmMspSense" xsi:type="SQLINT"/>
+	<COLUMN SOURCE="6" NAME="gsmMsHeight" xsi:type="SQLDECIMAL" PRECISION="3" SCALE="2"/>
+	<COLUMN SOURCE="7" NAME="gsmMspFout" xsi:type="SQLDECIMAL" PRECISION="3" SCALE="2"/>
+  <COLUMN SOURCE="8" NAME="MZONE" xsi:type="SQLCHAR" LENGTH="3"/>
+  </ROW>
+</BCPFORMAT>
